@@ -74,8 +74,8 @@ cd backend
 ## 📬 Contact
 
 Feel free to connect with me via:
-- [LinkedIn](https://linkedin.com)
-- [GitHub](https://github.com/your-username)
+- [LinkedIn](https://www.linkedin.com/in/michael-smart-47576a264/)
+- [GitHub](https://github.com/riiansmart)
 - Or send a message through the contact form on the site
 
 ## 📝 License
