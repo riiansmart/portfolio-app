@@ -1,0 +1,39 @@
+# ========== Node.js / Vite / React ==========
+node_modules/
+dist/
+.vite/
+.next/
+.DS_Store
+.env
+.env.local
+.env.*.local
+
+# Editor config
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ========== Java / Spring Boot ==========
+target/
+.classpath
+.project
+.settings/
+*.iml
+*.ipr
+*.iws
+
+# Java build artifacts
+*.log
+*.class
+*.jar
+*.war
+
+# Spring profiles and local config
+application-local.properties
+application-dev.properties
+application-test.properties
+
+# ========== OS/System Files ==========
+Thumbs.db
+.DS_Store
