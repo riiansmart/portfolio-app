@@ -33,6 +33,7 @@ target/
 application-local.properties
 application-dev.properties
 application-test.properties
+application.properties
 
 # ========== OS/System Files ==========
 Thumbs.db
