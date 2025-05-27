@@ -10,7 +10,6 @@ const Navbar = () => {
           <li><a href="#about" className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium" tabIndex={0} aria-label="Navigate to About section">About</a></li>
           <li><a href="#projects" className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium" tabIndex={0} aria-label="Navigate to Projects section">Projects</a></li>
           <li><a href="#skills" className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium" tabIndex={0} aria-label="Navigate to Skills section">Skills</a></li>
-          <li><a href="#contact" className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium" tabIndex={0} aria-label="Navigate to Contact section">Contact</a></li>
         </ul>
       </div>
     </nav>
