@@ -8,21 +8,30 @@ import { useTheme } from "./ThemeProvider";
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <nav className="backdrop-blur-md bg-black/60 dark:bg-white/80 border-b border-white/10 dark:border-black/20 shadow-lg sticky top-0 z-50 w-full">
-      <div className="container mx-auto flex items-center justify-between py-2 px-4">
+    <nav className="
+      bg-transparent
+      border border-black dark:border-white/20
+      rounded-2xl
+      mx-auto mt-6
+      px-8 py-2
+      w-fit
+      flex items-center justify-center
+      font-semibold
+      z-50
+      backdrop-blur-none
+      shadow-none
+      sticky top-0
+    ">
+      <div className="flex items-center gap-8">
         {/* Left: Avatar/Logo */}
         <a href="#hero" className="flex items-center gap-2 group focus:outline-none" aria-label="Home" tabIndex={0}>
-          <Avatar className="h-10 w-10 border-2 border-indigo-500/60 shadow-md">
-            <AvatarImage src="/profile.jpg" alt="Rian Smart" />
-            <AvatarFallback className="text-black dark:text-white">RS</AvatarFallback>
-          </Avatar>
-          <span className="hidden md:inline text-lg font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Rian Smart</span>
+          <span className="hidden md:inline text-lg font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">&lt;RS.Dev&gt;</span>
         </a>
         {/* Center: Nav Links */}
-        <ul className="hidden md:flex space-x-2 md:space-x-6">
-          <li><a href="#about" className="px-4 py-2 rounded-full text-sm font-semibold tracking-wide text-white dark:text-black hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-white dark:hover:text-white hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to About section">About</a></li>
-          <li><a href="#projects" className="px-4 py-2 rounded-full text-sm font-semibold tracking-wide text-white dark:text-black hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-white dark:hover:text-white hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to Projects section">Projects</a></li>
-          <li><a href="#skills" className="px-4 py-2 rounded-full text-sm font-semibold tracking-wide text-white dark:text-black hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-white dark:hover:text-white hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to Skills section">Skills</a></li>
+        <ul className="flex space-x-6">
+          <li><a href="#about" className="px-2 py-1 rounded-full text-sm font-semibold tracking-wide text-black dark:text-white hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to About section">About</a></li>
+          <li><a href="#projects" className="px-2 py-1 rounded-full text-sm font-semibold tracking-wide text-black dark:text-white hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to Projects section">Projects</a></li>
+          <li><a href="#skills" className="px-2 py-1 rounded-full text-sm font-semibold tracking-wide text-black dark:text-white hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to Skills section">Skills</a></li>
         </ul>
         {/* Right: Resume Button & Mobile Nav */}
         <div className="flex items-center gap-2">
@@ -43,9 +52,9 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side="left" className="bg-black/90 border-r border-white/10">
               <nav className="flex flex-col gap-6 mt-10">
-                <a href="#about" className="text-lg font-semibold text-white hover:text-indigo-400 transition-colors" tabIndex={0}>About</a>
-                <a href="#projects" className="text-lg font-semibold text-white hover:text-indigo-400 transition-colors" tabIndex={0}>Projects</a>
-                <a href="#skills" className="text-lg font-semibold text-white hover:text-indigo-400 transition-colors" tabIndex={0}>Skills</a>
+                <a href="#about" className="text-lg font-semibold text-black dark:text-white hover:text-indigo-400 transition-colors" tabIndex={0}>About</a>
+                <a href="#projects" className="text-lg font-semibold text-black dark:text-white hover:text-indigo-400 transition-colors" tabIndex={0}>Projects</a>
+                <a href="#skills" className="text-lg font-semibold text-black dark:text-white hover:text-indigo-400 transition-colors" tabIndex={0}>Skills</a>
                 <Button
                   size="icon"
                   variant="secondary"

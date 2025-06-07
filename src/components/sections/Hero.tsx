@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-indigo-950 dark:from-white dark:via-gray-100 dark:to-indigo-100 py-16 px-4"
+      className="min-h-[70vh] flex items-center justify-center bg-transparent py-16 px-4"
     >
       <Card className="backdrop-blur-xl bg-white/30 dark:bg-black/30 border border-white/20 dark:border-black/20 rounded-3xl shadow-2xl max-w-3xl w-full flex flex-col md:flex-row items-center md:items-stretch text-center md:text-left">
         <CardContent className="flex flex-col items-center md:items-start justify-center gap-4 p-8 md:w-1/2 border-b md:border-b-0 md:border-r border-white/10 dark:border-black/20">
@@ -15,15 +15,15 @@ const Hero = () => {
             <AvatarImage src="/profile.jpg" alt="Rian Smart" />
             <AvatarFallback>RS</AvatarFallback>
           </Avatar>
-          <h1 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 dark:from-yellow-400 dark:via-pink-400 dark:to-indigo-400 bg-clip-text text-transparent mb-1 drop-shadow-lg">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-black dark:text-white mb-1 drop-shadow-lg">
             Rian Smart
           </h1>
           <div className="flex flex-col gap-1 mb-1">
-            <span className="flex items-center gap-2 text-base font-semibold text-indigo-500 dark:text-pink-500">
+            <span className="flex items-center gap-2 text-base font-semibold text-black dark:text-white">
               <Briefcase className="size-5" aria-hidden="true" />
               Full-stack Software Developer
             </span>
-            <span className="flex items-center gap-2 text-sm text-cyan-400 dark:text-gray-600">
+            <span className="flex items-center gap-2 text-sm text-black dark:text-white">
               <MapPin className="size-5" aria-hidden="true" />
               Glendale, Arizona, US
             </span>
@@ -66,7 +66,7 @@ const Hero = () => {
           </div>
         </CardContent>
         <CardContent className="flex flex-col justify-center items-center md:items-start gap-6 p-8 md:w-1/2">
-          <p className="text-base md:text-lg text-white/90 dark:text-black/80 font-medium max-w-xl">
+          <p className="text-base md:text-lg text-black dark:text-white font-medium max-w-xl">
             I am a 20 year old Software Developer. I have been programming for 3 years now. I create professional full stack web applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start">
