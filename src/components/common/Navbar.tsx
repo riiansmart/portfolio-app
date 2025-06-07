@@ -14,7 +14,7 @@ const Navbar = () => {
         <a href="#hero" className="flex items-center gap-2 group focus:outline-none" aria-label="Home" tabIndex={0}>
           <Avatar className="h-10 w-10 border-2 border-indigo-500/60 shadow-md">
             <AvatarImage src="/profile.jpg" alt="Rian Smart" />
-            <AvatarFallback>RS</AvatarFallback>
+            <AvatarFallback className="text-black dark:text-white">RS</AvatarFallback>
           </Avatar>
           <span className="hidden md:inline text-lg font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Rian Smart</span>
         </a>
