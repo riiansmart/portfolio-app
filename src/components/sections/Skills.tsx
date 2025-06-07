@@ -12,23 +12,23 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-16 px-4 bg-gradient-to-br from-gray-900 via-black to-indigo-950">
+    <section id="skills" className="py-16 px-4 bg-gradient-to-br from-gray-900 via-black to-indigo-950 dark:from-white dark:via-gray-100 dark:to-indigo-100">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4 tracking-tight">
+        <h2 className="text-3xl md:text-4xl font-bold text-white dark:text-black text-center mb-4 tracking-tight">
           Skills
         </h2>
-        <div className="w-16 h-1 mx-auto bg-gradient-to-r from-indigo-400 to-pink-400 rounded-full mb-10"></div>
+        <div className="w-16 h-1 mx-auto bg-gradient-to-r from-indigo-400 to-pink-400 dark:from-yellow-400 dark:to-indigo-400 rounded-full mb-10"></div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {skills.map((skill) => (
-            <Card key={skill.name} className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 cursor-pointer">
+            <Card key={skill.name} className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-black/20 rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 cursor-pointer">
               <CardContent className="flex flex-col items-center justify-center p-6">
-                <div className="mb-2 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-3 rounded-full shadow-md">
+                <div className="mb-2 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 dark:from-yellow-400 dark:via-pink-400 dark:to-indigo-400 p-3 rounded-full shadow-md">
                   {skill.icon}
                 </div>
-                <span className="text-white font-semibold text-lg mt-2 mb-1">
+                <span className="text-white dark:text-black font-semibold text-lg mt-2 mb-1">
                   {skill.name}
                 </span>
-                <Badge variant="secondary" className="bg-gradient-to-r from-indigo-500 to-pink-500 text-white mt-1">{skill.category}</Badge>
+                <Badge variant="secondary" className="bg-gradient-to-r from-indigo-500 to-pink-500 dark:from-yellow-400 dark:to-indigo-400 text-white dark:text-black mt-1">{skill.category}</Badge>
               </CardContent>
             </Card>
           ))}
