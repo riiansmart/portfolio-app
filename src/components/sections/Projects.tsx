@@ -1,3 +1,7 @@
+import { Card, CardContent } from "../ui/card";
+import { Badge } from "../ui/badge";
+import { Github } from "lucide-react";
+
 const Projects = () => {
   // Placeholder for project data
   const projects = [
@@ -5,19 +9,22 @@ const Projects = () => {
       title: 'Portfolio Website',
       description: 'A personal portfolio to showcase my work and skills.',
       tech: ['React', 'Next.js', 'TailwindCSS'],
-      link: '#',
+      github: '#',
+      demo: '#',
     },
     {
       title: 'E-commerce App',
       description: 'A modern e-commerce platform with seamless UX.',
       tech: ['React', 'Redux', 'Stripe'],
-      link: '#',
+      github: '#',
+      demo: '#',
     },
     {
       title: 'Blog Platform',
       description: 'A full-featured blog platform with markdown support.',
       tech: ['Next.js', 'TypeScript', 'Prisma'],
-      link: '#',
+      github: '#',
+      demo: '#',
     },
   ];
 
@@ -30,28 +37,25 @@ const Projects = () => {
         <div className="w-16 h-1 mx-auto bg-gradient-to-r from-indigo-400 to-pink-400 rounded-full mb-10"></div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, idx) => (
-            <a
-              key={project.title}
-              href={project.link}
-              className="group block backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 transition-transform duration-200 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-indigo-400"
-              tabIndex={0}
-              aria-label={`View details for ${project.title}`}
-            >
-              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors duration-200">
-                {project.title}
-              </h3>
-              <p className="text-white/80 mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-indigo-500 to-pink-500 text-white shadow-md"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </a>
+            <Card key={project.title} className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl shadow-xl transition-transform duration-200 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-indigo-400">
+              <CardContent className="p-6 flex flex-col h-full">
+                {/* Project image placeholder */}
+                <div className="h-32 w-full bg-gradient-to-tr from-indigo-500/30 via-purple-500/30 to-pink-500/30 rounded-xl mb-4 flex items-center justify-center">
+                  <span className="text-white/60 text-2xl font-bold">Image</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+                <p className="text-white/80 mb-4 flex-1">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.map((tech) => (
+                    <Badge key={tech} variant="secondary" className="bg-gradient-to-r from-indigo-500 to-pink-500 text-white">{tech}</Badge>
+                  ))}
+                </div>
+                <div className="flex gap-2 mt-auto">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-white hover:text-indigo-400 transition-colors"><Github className="h-5 w-5" /></a>
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label="Live Demo" className="text-sm font-semibold text-indigo-300 hover:text-pink-400 transition-colors">Live Demo</a>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
