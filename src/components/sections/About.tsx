@@ -1,23 +1,14 @@
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-black">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-10 text-white">About Me</h2>
-        <div className="max-w-3xl mx-auto bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-800 flex flex-col items-center">
-          <p className="text-gray-300 text-lg leading-relaxed mb-8">
-            Hello! I'm a new software developer eager to build amazing and impactful applications.
-            I have a strong foundation in web development technologies and a passion for learning and problem-solving.
-            Currently exploring opportunities to contribute my skills to innovative projects.
-          </p>
-          <a
-            href="#contact"
-            className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg border border-gray-700 shadow-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
-            tabIndex={0}
-            aria-label="Contact Me"
-          >
-            Contact Me
-          </a>
-        </div>
+    <section id="about" className="py-16 px-4 flex justify-center items-center bg-gradient-to-br from-gray-900 via-black to-indigo-950">
+      <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl shadow-2xl p-10 max-w-2xl w-full text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
+          About Me
+        </h2>
+        <div className="w-16 h-1 mx-auto bg-gradient-to-r from-indigo-400 to-pink-400 rounded-full mb-6"></div>
+        <p className="text-lg text-white/90 font-medium">
+          I am a passionate front-end developer with a love for crafting visually stunning and highly interactive web applications. My focus is on delivering seamless user experiences using the latest technologies.
+        </p>
       </div>
     </section>
   );

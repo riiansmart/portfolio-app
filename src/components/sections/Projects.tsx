@@ -1,36 +1,57 @@
 const Projects = () => {
   // Placeholder for project data
   const projects = [
-    { id: 1, title: "TaskFlow", description: "A full-stack task management web app built with React (Vite) and Spring Boot. Features JWT authentication, role-based access, and full CRUD task operations with a clean, responsive UI.", tech: ["Java Spring Boot", "React","PostgreSQL"] },
-    { id: 2, title: "CineScope", description: "CineScope is a responsive movie review platform built with C# ASP.NET Core Blazor and MongoDB, allowing users to browse, review, and engage with films and community content.", tech: ["C#", "Blazor","MongoDB", "Microsoft Azure"] },
-    { id: 3, title: "CardMaxxing", description: "A cloud-hosted e-commerce platform for browsing and purchasing graphics cards, built with ASP.NET MVC and deployed on Microsoft Azure", tech: ["C#", "ASP.NET", "MySQL", "Microsoft Azure"] },
+    {
+      title: 'Portfolio Website',
+      description: 'A personal portfolio to showcase my work and skills.',
+      tech: ['React', 'Next.js', 'TailwindCSS'],
+      link: '#',
+    },
+    {
+      title: 'E-commerce App',
+      description: 'A modern e-commerce platform with seamless UX.',
+      tech: ['React', 'Redux', 'Stripe'],
+      link: '#',
+    },
+    {
+      title: 'Blog Platform',
+      description: 'A full-featured blog platform with markdown support.',
+      tech: ['Next.js', 'TypeScript', 'Prisma'],
+      link: '#',
+    },
   ];
 
   return (
-    <section id="projects" className="py-20 bg-black">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-white">My Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div key={project.id} className="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full">
-              <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
-              <p className="text-gray-300 mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.tech.map((techName, index) => (
-                  <span key={index} className="bg-gray-800 text-gray-200 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-gray-700">
-                    {techName}
+    <section id="projects" className="py-16 px-4 bg-gradient-to-br from-black via-gray-900 to-indigo-950">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4 tracking-tight">
+          Projects
+        </h2>
+        <div className="w-16 h-1 mx-auto bg-gradient-to-r from-indigo-400 to-pink-400 rounded-full mb-10"></div>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, idx) => (
+            <a
+              key={project.title}
+              href={project.link}
+              className="group block backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 transition-transform duration-200 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              tabIndex={0}
+              aria-label={`View details for ${project.title}`}
+            >
+              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors duration-200">
+                {project.title}
+              </h3>
+              <p className="text-white/80 mb-4">{project.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {project.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-indigo-500 to-pink-500 text-white shadow-md"
+                  >
+                    {tech}
                   </span>
                 ))}
               </div>
-              <a
-                href="#"
-                className="mt-auto bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg border border-gray-700 shadow-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 text-center"
-                tabIndex={0}
-                aria-label={`View ${project.title} project`}
-              >
-                View Project
-              </a>
-            </div>
+            </a>
           ))}
         </div>
       </div>
