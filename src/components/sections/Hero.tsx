@@ -9,7 +9,7 @@ const Hero = () => {
       id="hero"
       className="min-h-[70vh] flex items-center justify-center bg-transparent py-16 px-4"
     >
-      <Card className="backdrop-blur-xl bg-white/30 dark:bg-black/30 border border-white/20 dark:border-black/20 rounded-3xl shadow-2xl max-w-3xl w-full flex flex-col md:flex-row items-center md:items-stretch text-center md:text-left">
+      <Card className="backdrop-blur-xl bg-white/30 dark:bg-black/30 border border-black dark:border-white/20 rounded-3xl shadow-2xl max-w-3xl w-full flex flex-col md:flex-row items-center md:items-stretch text-center md:text-left">
         <CardContent className="flex flex-col items-center md:items-start justify-center gap-4 p-8 md:w-1/2 border-b md:border-b-0 md:border-r border-white/10 dark:border-black/20">
           <Avatar className="h-28 w-28 mb-2 border-4 border-indigo-400/70 shadow-lg">
             <AvatarImage src="/profile.jpg" alt="Rian Smart" />

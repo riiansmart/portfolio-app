@@ -37,7 +37,7 @@ const Projects = () => {
         <div className="w-16 h-1 mx-auto bg-gradient-to-r from-indigo-400 to-pink-400 dark:from-yellow-400 dark:to-indigo-400 rounded-full mb-10"></div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, idx) => (
-            <Card key={project.title} className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-black/20 rounded-2xl shadow-xl transition-transform duration-200 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-indigo-400">
+            <Card key={project.title} className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-xl transition-transform duration-200 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-indigo-400">
               <CardContent className="p-6 flex flex-col h-full">
                 {/* Project image placeholder */}
                 <div className="h-32 w-full bg-gradient-to-tr from-indigo-500/30 via-purple-500/30 to-pink-500/30 dark:from-yellow-400/20 dark:via-pink-400/20 dark:to-indigo-400/20 rounded-xl mb-4 flex items-center justify-center">

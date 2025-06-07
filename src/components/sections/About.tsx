@@ -5,7 +5,7 @@ import { Badge } from "../ui/badge";
 const About = () => {
   return (
     <section id="about" className="py-16 px-4 flex justify-center items-center bg-transparent">
-      <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-black/20 rounded-3xl shadow-2xl max-w-3xl w-full">
+      <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-3xl shadow-2xl max-w-3xl w-full">
         <CardContent className="flex flex-col md:flex-row items-center gap-8 p-10">
           <Avatar className="h-28 w-28 border-2 border-indigo-500/60 shadow-md">
             <AvatarImage src="/profile.jpg" alt="Rian Smart" />

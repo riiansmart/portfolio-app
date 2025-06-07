@@ -20,7 +20,7 @@ const Skills = () => {
         <div className="w-16 h-1 mx-auto bg-gradient-to-r from-indigo-400 to-pink-400 dark:from-yellow-400 dark:to-indigo-400 rounded-full mb-10"></div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {skills.map((skill) => (
-            <Card key={skill.name} className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-black/20 rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 cursor-pointer">
+            <Card key={skill.name} className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 cursor-pointer">
               <CardContent className="flex flex-col items-center justify-center p-6">
                 <div className="mb-2 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 dark:from-yellow-400 dark:via-pink-400 dark:to-indigo-400 p-3 rounded-full shadow-md">
                   {skill.icon}
