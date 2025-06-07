@@ -87,8 +87,7 @@ const Hero = () => {
             </Button>
             <Button
               asChild
-              variant="secondary"
-              className="border-none dark:bg-black/10 dark:text-black w-full sm:w-auto"
+              className="bg-gradient-to-r from-pink-500 to-indigo-500 dark:from-yellow-400 dark:to-pink-500 text-white dark:text-black font-semibold shadow-lg border-none w-full sm:w-auto"
             >
               <a
                 href="#about"
