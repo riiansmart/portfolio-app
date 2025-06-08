@@ -91,11 +91,15 @@ const Hero = () => {
               >
                 <a
                   href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  download="Michael_Smart_Resume.pdf"
                   tabIndex={0}
                   aria-label="Download Resume"
-                  onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { window.open('/resume.pdf', '_blank'); } }}
+                  onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { 
+                    const link = document.createElement('a');
+                    link.href = '/resume.pdf';
+                    link.download = 'Michael_Smart_Resume.pdf';
+                    link.click();
+                  }}}
                 >
                   Download Resume
                 </a>
