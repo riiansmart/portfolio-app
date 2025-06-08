@@ -24,14 +24,14 @@ const Navbar = () => {
     ">
       <div className="flex items-center gap-8">
         {/* Left: Avatar/Logo */}
-        <a href="#hero" className="flex items-center gap-2 group focus:outline-none" aria-label="Home" tabIndex={0}>
+        <a href="#" className="flex items-center gap-2 group focus:outline-none" aria-label="Home" tabIndex={0}>
           <span className="hidden md:inline text-lg font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">&lt;RS.Dev&gt;</span>
         </a>
         {/* Center: Nav Links */}
         <ul className="flex space-x-6">
-          <li><a href="#about" className="px-2 py-1 rounded-full text-sm font-semibold tracking-wide text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to About section">About</a></li>
-          <li><a href="#projects" className="px-2 py-1 rounded-full text-sm font-semibold tracking-wide text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to Projects section">Projects</a></li>
           <li><a href="#skills" className="px-2 py-1 rounded-full text-sm font-semibold tracking-wide text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to Skills section">Skills</a></li>
+          <li><a href="#projects" className="px-2 py-1 rounded-full text-sm font-semibold tracking-wide text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to Projects section">Projects</a></li>
+          <li><a href="#contact" className="px-2 py-1 rounded-full text-sm font-semibold tracking-wide text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to Contact section">Contact</a></li>
         </ul>
         {/* Right: Resume Button & Mobile Nav */}
         <div className="flex items-center gap-2">
@@ -52,9 +52,9 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side="left" className="bg-black/90 border-r border-white/10">
               <nav className="flex flex-col gap-6 mt-10">
-                <a href="#about" className="text-lg font-semibold text-black dark:text-white hover:text-indigo-400 transition-colors" tabIndex={0}>About</a>
-                <a href="#projects" className="text-lg font-semibold text-black dark:text-white hover:text-indigo-400 transition-colors" tabIndex={0}>Projects</a>
                 <a href="#skills" className="text-lg font-semibold text-black dark:text-white hover:text-indigo-400 transition-colors" tabIndex={0}>Skills</a>
+                <a href="#projects" className="text-lg font-semibold text-black dark:text-white hover:text-indigo-400 transition-colors" tabIndex={0}>Projects</a>
+                <a href="#contact" className="text-lg font-semibold text-black dark:text-white hover:text-indigo-400 transition-colors" tabIndex={0}>Contact</a>
                 <Button
                   size="icon"
                   variant="secondary"
