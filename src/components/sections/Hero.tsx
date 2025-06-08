@@ -6,12 +6,9 @@ import { SiLinkedin, SiGithub } from "react-icons/si";
 
 const Hero = () => {
   return (
-    <section
-      id="hero"
-      className="min-h-[70vh] flex items-center justify-center bg-transparent py-16 px-4"
-    >
-      <Card className="backdrop-blur-xl bg-white/30 dark:bg-black/30 border border-black dark:border-white/20 rounded-3xl shadow-2xl max-w-3xl w-full flex flex-col md:flex-row items-center md:items-stretch text-center md:text-left">
-        <CardContent className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-0 p-0 w-full">
+    <section id="hero" className="w-full">
+      <Card className="backdrop-blur-xl bg-white/30 dark:bg-black/30 border border-black dark:border-white/20 rounded-3xl shadow-2xl w-full">
+        <CardContent className="flex flex-col md:flex-row items-center md:items-stretch p-0 w-full text-center md:text-left">
           <div className="flex flex-col items-center md:items-start justify-center gap-4 p-8 md:w-1/2 border-b md:border-b-0 md:border-r border-white/10 dark:border-black/20">
             <Avatar className="h-28 w-28 mb-2 border-4 border-indigo-400/70 shadow-lg">
               <AvatarImage src="/avatar.jpg" alt="Rian Smart" />
@@ -82,7 +79,7 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center md:items-start gap-4 md:w-1/2 pt-6 md:pt-0 md:pl-8">
+          <div className="flex flex-col justify-center items-center md:items-start gap-4 md:w-1/2 p-8">
             <p className="text-base md:text-lg text-black dark:text-white font-medium">
               I am a 20 year old Software Developer. I have been programming for 3 years now. I create professional full stack web applications.
             </p>
@@ -112,7 +109,7 @@ const Hero = () => {
                   href="#contact"
                   tabIndex={0}
                   aria-label="Contact Me"
-                  onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { window.location.href = '#contact'; } }}
+                  onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { window.open('#contact', '_blank'); } }}
                 >
                   Contact Me
                 </a>
