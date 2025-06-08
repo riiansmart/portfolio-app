@@ -9,7 +9,7 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <nav className="
-      bg-transparent
+      bg-white dark:bg-black
       border border-black dark:border-white/20
       rounded-2xl
       mx-auto mt-6
@@ -19,8 +19,8 @@ const Navbar = () => {
       font-semibold
       z-50
       backdrop-blur-none
-      shadow-none
-      sticky top-0
+      shadow-lg
+      sticky top-6
     ">
       <div className="flex items-center gap-8">
         {/* Left: Avatar/Logo */}
@@ -48,9 +48,9 @@ const Navbar = () => {
           {/* Mobile Nav */}
           <Sheet>
             <SheetTrigger asChild>
-              <Button size="icon" variant="ghost" className="md:hidden text-white"><Menu className="h-6 w-6" /></Button>
+              <Button size="icon" variant="ghost" className="md:hidden text-black dark:text-white"><Menu className="h-6 w-6" /></Button>
             </SheetTrigger>
-            <SheetContent side="left" className="bg-black/90 border-r border-white/10">
+            <SheetContent side="left" className="bg-white dark:bg-black border-r border-black/10 dark:border-white/10">
               <nav className="flex flex-col gap-6 mt-10">
                 <a href="#skills" className="text-lg font-semibold text-black dark:text-white hover:text-indigo-400 transition-colors" tabIndex={0}>Skills</a>
                 <a href="#projects" className="text-lg font-semibold text-black dark:text-white hover:text-indigo-400 transition-colors" tabIndex={0}>Projects</a>

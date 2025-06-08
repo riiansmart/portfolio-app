@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="
-      bg-transparent
+      bg-white dark:bg-black
       border border-black dark:border-white/20
       rounded-2xl
       mx-auto mb-6
@@ -10,7 +10,7 @@ const Footer = () => {
       flex items-center justify-center
       font-semibold
       backdrop-blur-none
-      shadow-none
+      shadow-lg
     ">
       <div className="flex flex-col items-center gap-2">
         <p className="text-center text-base font-medium text-black dark:text-white">
