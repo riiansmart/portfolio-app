@@ -13,7 +13,6 @@ A modern, responsive portfolio website built with React, TypeScript, Vite, and T
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
 - [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
