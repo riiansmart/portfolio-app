@@ -104,7 +104,7 @@ const Hero = () => {
                 >
                   Download Resume
                   {/* Shine overlay */}
-                  <span className="pointer-events-none absolute inset-0 before:absolute before:inset-y-0 before:left-[-100%] before:w-1/3 before:bg-white/50 dark:before:bg-black/20 before:skew-x-[-20deg] before:transition-transform before:ease-out before:duration-300 group-hover:before:translate-x-[250%]" />
+                  <span className="pointer-events-none absolute inset-0 before:absolute before:inset-y-0 before:left-[-100%] before:w-1/3 before:bg-white/50 dark:before:bg-black/20 before:skew-x-[-20deg] before:transition-transform before:ease-out before:duration-150 group-hover:before:translate-x-[250%]" />
                 </a>
               </Button>
 
