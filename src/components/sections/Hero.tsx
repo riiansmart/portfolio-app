@@ -31,7 +31,7 @@ const Hero = () => {
               <Button
                 asChild
                 size="sm"
-                className="bg-gradient-to-tr from-red-500 to-orange-400 hover:from-red-600 hover:to-orange-500 text-white shadow-md"
+                variant="outline"
                 aria-label="Email Contact"
                 tabIndex={0}
               >
@@ -46,7 +46,7 @@ const Hero = () => {
               <Button
                 asChild
                 size="sm"
-                className="bg-gradient-to-tr from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white shadow-md"
+                variant="outline"
                 aria-label="LinkedIn Profile"
                 tabIndex={0}
               >
@@ -63,7 +63,7 @@ const Hero = () => {
               <Button
                 asChild
                 size="sm"
-                className="bg-gradient-to-tr from-gray-800 to-gray-600 hover:from-black hover:to-gray-700 text-white shadow-md"
+                variant="outline"
                 aria-label="GitHub Profile"
                 tabIndex={0}
               >
@@ -84,36 +84,35 @@ const Hero = () => {
               I am a 20 year old Software Developer. I have been programming for 3 years now. I create professional full stack web applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 w-full justify-center md:justify-start">
-              <Button
-                asChild
-                size="sm"
-                className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-yellow-400 dark:via-pink-400 dark:to-indigo-400 text-white dark:text-black font-semibold shadow-lg border-none"
-              >
+              <Button asChild size="sm" variant="cta">
                 <a
                   href="/resume.pdf"
                   download="Michael_Smart_Resume.pdf"
                   tabIndex={0}
                   aria-label="Download Resume"
-                  onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { 
-                    const link = document.createElement('a');
-                    link.href = '/resume.pdf';
-                    link.download = 'Michael_Smart_Resume.pdf';
-                    link.click();
-                  }}}
+                  onKeyDown={e => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      const link = document.createElement("a");
+                      link.href = "/resume.pdf";
+                      link.download = "Michael_Smart_Resume.pdf";
+                      link.click();
+                    }
+                  }}
                 >
                   Download Resume
                 </a>
               </Button>
-              <Button
-                asChild
-                size="sm"
-                className="bg-gradient-to-r from-pink-500 to-indigo-500 dark:from-yellow-400 dark:to-pink-500 text-white dark:text-black font-semibold shadow-lg border-none"
-              >
+
+              <Button asChild size="sm" variant="outline">
                 <a
                   href="#contact"
                   tabIndex={0}
                   aria-label="Contact Me"
-                  onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { window.open('#contact', '_blank'); } }}
+                  onKeyDown={e => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      window.open("#contact", "_blank");
+                    }
+                  }}
                 >
                   Contact Me
                 </a>

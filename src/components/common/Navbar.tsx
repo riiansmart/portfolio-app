@@ -1,5 +1,4 @@
 // src/components/common/Navbar.tsx
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Menu, Sun, Moon } from "lucide-react";
@@ -25,7 +24,7 @@ const Navbar = () => {
       <div className="flex items-center gap-8">
         {/* Left: Avatar/Logo */}
         <a href="#" className="flex items-center gap-2 group focus:outline-none" aria-label="Home" tabIndex={0}>
-          <span className="hidden md:inline text-lg font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">&lt;RS.Dev&gt;</span>
+          <span className="hidden md:inline text-lg font-bold text-black dark:text-white">&lt;RS.Dev&gt;</span>
         </a>
         {/* Center: Nav Links */}
         <ul className="flex space-x-6">
@@ -37,10 +36,10 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <Button
             size="icon"
-            variant="secondary"
+            variant="ghost"
             aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             onClick={toggleTheme}
-            className="hidden md:inline-flex bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-200 border-none focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="hidden md:inline-flex text-black dark:text-white"
             tabIndex={0}
           >
             {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
@@ -57,10 +56,10 @@ const Navbar = () => {
                 <a href="#contact" className="text-lg font-semibold text-black dark:text-white hover:text-indigo-400 transition-colors" tabIndex={0}>Contact</a>
                 <Button
                   size="icon"
-                  variant="secondary"
+                  variant="ghost"
                   aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
                   onClick={toggleTheme}
-                  className="mt-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg border-none focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                  className="mt-4 text-black dark:text-white"
                   tabIndex={0}
                 >
                   {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}

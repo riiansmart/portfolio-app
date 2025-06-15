@@ -1,5 +1,6 @@
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
+import { Monitor, Server, Rocket } from "lucide-react";
 // Icon imports
 import { 
   SiAngular, SiBlazor, SiCss3, SiHtml5, SiJavascript, SiJquery, 
@@ -64,8 +65,8 @@ const Skills = () => {
       <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-lg h-full hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
         <CardContent className="p-6 h-full flex flex-col">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white text-lg font-bold">⚛️</span>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-md bg-black text-white dark:bg-white dark:text-black">
+              <Monitor className="w-4 h-4" />
             </div>
             <h3 className="text-xl font-bold text-black dark:text-white">Frontend</h3>
           </div>
@@ -79,7 +80,7 @@ const Skills = () => {
                 <Badge 
                   key={skill.name} 
                   variant="secondary" 
-                  className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs px-3 py-1 hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 cursor-default flex items-center gap-1.5"
+                  className="text-xs px-3 py-1 flex items-center gap-1.5"
                 >
                   <IconComponent className="size-3" />
                   {skill.name}
@@ -94,8 +95,8 @@ const Skills = () => {
       <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-lg h-full hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
         <CardContent className="p-6 h-full flex flex-col">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-gradient-to-tr from-green-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white text-lg font-bold">🔧</span>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-md bg-black text-white dark:bg-white dark:text-black">
+              <Server className="w-4 h-4" />
             </div>
             <h3 className="text-xl font-bold text-black dark:text-white">Backend</h3>
           </div>
@@ -109,7 +110,7 @@ const Skills = () => {
                 <Badge 
                   key={skill.name} 
                   variant="secondary" 
-                  className="bg-gradient-to-r from-green-500 to-blue-500 text-white text-xs px-3 py-1 hover:from-green-600 hover:to-blue-600 transition-all duration-200 cursor-default flex items-center gap-1.5"
+                  className="text-xs px-3 py-1 flex items-center gap-1.5"
                 >
                   <IconComponent className="size-3" />
                   {skill.name}
@@ -124,8 +125,8 @@ const Skills = () => {
       <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-lg h-full hover:shadow-xl transition-all duration-300 hover:scale-[1.02] md:col-span-2 lg:col-span-1">
         <CardContent className="p-6 h-full flex flex-col">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-gradient-to-tr from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white text-lg font-bold">🚀</span>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-md bg-black text-white dark:bg-white dark:text-black">
+              <Rocket className="w-4 h-4" />
             </div>
             <h3 className="text-xl font-bold text-black dark:text-white">Other</h3>
           </div>
@@ -139,7 +140,7 @@ const Skills = () => {
                 <Badge 
                   key={skill.name} 
                   variant="secondary" 
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-3 py-1 hover:from-purple-600 hover:to-pink-600 transition-all duration-200 cursor-default flex items-center gap-1.5"
+                  className="text-xs px-3 py-1 flex items-center gap-1.5"
                 >
                   <IconComponent className="size-3" />
                   {skill.name}

@@ -66,8 +66,8 @@ const Projects = () => {
     <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-lg">
       <CardContent className="p-8">
         <div className="flex items-center gap-2 mb-8">
-          <div className="w-8 h-8 bg-gradient-to-tr from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-            <Code className="w-4 h-4 text-white" />
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center shadow-md bg-black text-white dark:bg-white dark:text-black">
+            <Code className="w-4 h-4 text-current" />
           </div>
           <h2 className="text-2xl font-bold text-black dark:text-white">Featured Projects</h2>
         </div>
@@ -100,7 +100,7 @@ const Projects = () => {
                     <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
                       {project.features.map((feature, index) => (
                         <li key={index} className="flex gap-2">
-                          <span className="text-orange-500 mt-0.5">•</span>
+                          <span className="mt-0.5">•</span>
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -114,7 +114,7 @@ const Projects = () => {
                         <Badge 
                           key={tech} 
                           variant="secondary" 
-                          className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs border border-gray-200 dark:border-gray-700 hover:bg-orange-500/20 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                          className="bg-gray-100 dark:bg-secondary text-gray-700 dark:text-secondary-foreground text-xs px-2 py-1 border border-gray-200 dark:border-border"
                         >
                           {tech}
                         </Badge>
