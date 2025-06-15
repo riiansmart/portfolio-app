@@ -10,7 +10,7 @@ const Hero = () => {
       <Card className="backdrop-blur-xl bg-white/30 dark:bg-black/30 border border-black dark:border-white/20 rounded-3xl shadow-2xl w-full">
         <CardContent className="flex flex-col md:flex-row items-center md:items-stretch p-0 w-full text-center md:text-left">
           <div className="flex flex-col items-center md:items-start justify-center gap-4 p-8 md:w-1/2 border-b md:border-b-0 md:border-r border-white/10 dark:border-black/20">
-            <Avatar className="h-28 w-28 mb-2 border-4 border-indigo-400/70 shadow-lg transition-transform duration-300 hover:rotate-1 hover:scale-105">
+            <Avatar className="h-28 w-28 mb-2 border-4 border-indigo-400/70 shadow-lg transition-transform duration-300 hover:rotate-1 hover:scale-105 animate-float">
               <AvatarImage src="/avatar.jpg" alt="Rian Smart" />
               <AvatarFallback>RS</AvatarFallback>
             </Avatar>
@@ -87,7 +87,7 @@ const Hero = () => {
               I am a 20 year old Software Developer. I have been programming for 3 years now. I create professional full stack web applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 w-full justify-center md:justify-start">
-              <Button asChild size="sm" variant="cta">
+              <Button asChild size="sm" variant="cta" className="relative overflow-hidden group">
                 <a
                   href="/resume.pdf"
                   download="Michael_Smart_Resume.pdf"
@@ -103,6 +103,8 @@ const Hero = () => {
                   }}
                 >
                   Download Resume
+                  {/* Shine overlay */}
+                  <span className="pointer-events-none absolute inset-0 before:absolute before:inset-y-0 before:left-[-100%] before:w-1/3 before:bg-white/50 dark:before:bg-black/20 before:skew-x-[-20deg] before:transition-transform before:ease-out before:duration-300 group-hover:before:translate-x-[250%]" />
                 </a>
               </Button>
 
@@ -123,6 +125,18 @@ const Hero = () => {
             </div>
           </div>
         </CardContent>
+        {/* Scroll Down indicator */}
+        <div className="hidden md:flex w-full justify-center pb-4">
+          <a
+            href="#skills"
+            aria-label="Scroll to Skills"
+            className="text-black dark:text-white animate-bounce hover:scale-110 transition-transform duration-200"
+            tabIndex={0}
+            onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { document.getElementById('skills')?.scrollIntoView({behavior:'smooth'}); } }}
+          >
+            ↓
+          </a>
+        </div>
       </Card>
     </section>
   );

@@ -116,4 +116,9 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Global smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
 }
