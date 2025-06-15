@@ -77,12 +77,12 @@ const Projects = () => {
           {projects.map((project) => (
             <div key={project.title} className="group">
               <TiltCard>
-                <Card className="h-full bg-white/5 dark:bg-black/5 border border-black dark:border-white/20 rounded-xl transition-all duration-300 hover:shadow-xl hover:bg-white/10 dark:hover:bg-black/10 hover:border-orange-500/50">
+                <Card className="h-full bg-white/5 dark:bg-black/5 border border-black dark:border-white/20 rounded-xl transition-all duration-300 hover:shadow-xl hover:bg-white/10 dark:hover:bg-black/10">
                   <CardContent className="p-6 h-full flex flex-col">
                     {/* Project Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-black dark:text-white mb-2 group-hover:text-orange-500 transition-colors">
+                        <h3 className="text-lg font-semibold text-black dark:text-white mb-2">
                           {project.title}
                         </h3>
                         <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${getStatusColor(project.status)}`}>
@@ -131,7 +131,7 @@ const Projects = () => {
                         target="_blank" 
                         rel="noopener noreferrer" 
                         aria-label={`View ${project.title} on GitHub`}
-                        className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 transition-colors text-sm"
+                        className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors text-sm"
                       >
                         <Github className="h-4 w-4" />
                         <span>Code</span>
@@ -141,7 +141,7 @@ const Projects = () => {
                         target="_blank" 
                         rel="noopener noreferrer" 
                         aria-label={`View ${project.title} live demo`}
-                        className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 transition-colors text-sm"
+                        className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors text-sm"
                       >
                         <ExternalLink className="h-4 w-4" />
                         <span>Demo</span>
