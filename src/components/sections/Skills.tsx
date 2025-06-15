@@ -13,6 +13,7 @@ import {
 import { DiDatabase, DiJava } from "react-icons/di";
 import { MdApi, MdSecurity, MdCloud } from "react-icons/md";
 import { AiOutlineCode } from "react-icons/ai";
+import { TiltCard } from "../common/TiltCard";
 
 const Skills = () => {
   const frontendSkills = [
@@ -62,7 +63,8 @@ const Skills = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 h-full">
       {/* Frontend Card */}
-      <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-lg h-full hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+      <TiltCard>
+      <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-lg h-full">
         <CardContent className="p-6 h-full flex flex-col">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-md bg-black text-white dark:bg-white dark:text-black">
@@ -90,9 +92,11 @@ const Skills = () => {
           </div>
         </CardContent>
       </Card>
+      </TiltCard>
 
       {/* Backend Card */}
-      <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-lg h-full hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+      <TiltCard>
+      <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-lg h-full">
         <CardContent className="p-6 h-full flex flex-col">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-md bg-black text-white dark:bg-white dark:text-black">
@@ -120,9 +124,11 @@ const Skills = () => {
           </div>
         </CardContent>
       </Card>
+      </TiltCard>
 
       {/* Other Technologies Card */}
-      <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-lg h-full hover:shadow-xl transition-all duration-300 hover:scale-[1.02] md:col-span-2 lg:col-span-1">
+      <TiltCard>
+      <Card className="backdrop-blur-md bg-white/10 dark:bg-black/10 border border-black dark:border-white/20 rounded-2xl shadow-lg h-full md:col-span-2 lg:col-span-1">
         <CardContent className="p-6 h-full flex flex-col">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-md bg-black text-white dark:bg-white dark:text-black">
@@ -150,6 +156,7 @@ const Skills = () => {
           </div>
         </CardContent>
       </Card>
+      </TiltCard>
     </div>
   );
 };

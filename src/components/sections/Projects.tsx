@@ -1,6 +1,7 @@
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Github, ExternalLink, Code } from "lucide-react";
+import { TiltCard } from "../common/TiltCard";
 
 const Projects = () => {
   // Updated project data for coding projects showcase
@@ -75,78 +76,80 @@ const Projects = () => {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div key={project.title} className="group">
-              <Card className="h-full bg-white/5 dark:bg-black/5 border border-black dark:border-white/20 rounded-xl transition-all duration-300 hover:shadow-xl hover:bg-white/10 dark:hover:bg-black/10 hover:border-orange-500/50">
-                <CardContent className="p-6 h-full flex flex-col">
-                  {/* Project Header */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-black dark:text-white mb-2 group-hover:text-orange-500 transition-colors">
-                        {project.title}
-                      </h3>
-                      <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${getStatusColor(project.status)}`}>
-                        {project.status}
+              <TiltCard>
+                <Card className="h-full bg-white/5 dark:bg-black/5 border border-black dark:border-white/20 rounded-xl transition-all duration-300 hover:shadow-xl hover:bg-white/10 dark:hover:bg-black/10 hover:border-orange-500/50">
+                  <CardContent className="p-6 h-full flex flex-col">
+                    {/* Project Header */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold text-black dark:text-white mb-2 group-hover:text-orange-500 transition-colors">
+                          {project.title}
+                        </h3>
+                        <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${getStatusColor(project.status)}`}>
+                          {project.status}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  {/* Project Description */}
-                  <p className="text-sm text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  {/* Project Features */}
-                  <div className="mb-4 flex-1">
-                    <h4 className="text-sm font-medium text-black dark:text-white mb-2">Key Features:</h4>
-                    <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
-                      {project.features.map((feature, index) => (
-                        <li key={index} className="flex gap-2">
-                          <span className="mt-0.5">•</span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  {/* Tech Stack */}
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-1">
-                      {project.tech.map((tech) => (
-                        <Badge 
-                          key={tech} 
-                          variant="secondary" 
-                          className="bg-gray-100 dark:bg-secondary text-gray-700 dark:text-secondary-foreground text-xs px-2 py-1 border border-gray-200 dark:border-border"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
+                    
+                    {/* Project Description */}
+                    <p className="text-sm text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+                    
+                    {/* Project Features */}
+                    <div className="mb-4 flex-1">
+                      <h4 className="text-sm font-medium text-black dark:text-white mb-2">Key Features:</h4>
+                      <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
+                        {project.features.map((feature, index) => (
+                          <li key={index} className="flex gap-2">
+                            <span className="mt-0.5">•</span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
-                  
-                  {/* Project Links */}
-                                      <div className="flex items-center gap-3 pt-4 border-t border-black dark:border-white/20">
-                    <a 
-                      href={project.github} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      aria-label={`View ${project.title} on GitHub`}
-                      className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 transition-colors text-sm"
-                    >
-                      <Github className="h-4 w-4" />
-                      <span>Code</span>
-                    </a>
-                    <a 
-                      href={project.demo} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      aria-label={`View ${project.title} live demo`}
-                      className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 transition-colors text-sm"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                      <span>Demo</span>
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
+                    
+                    {/* Tech Stack */}
+                    <div className="mb-4">
+                      <div className="flex flex-wrap gap-1">
+                        {project.tech.map((tech) => (
+                          <Badge 
+                            key={tech} 
+                            variant="secondary" 
+                            className="bg-gray-100 dark:bg-secondary text-gray-700 dark:text-secondary-foreground text-xs px-2 py-1 border border-gray-200 dark:border-border"
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Project Links */}
+                    <div className="flex items-center gap-3 pt-4 border-t border-black dark:border-white/20">
+                      <a 
+                        href={project.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        aria-label={`View ${project.title} on GitHub`}
+                        className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 transition-colors text-sm"
+                      >
+                        <Github className="h-4 w-4" />
+                        <span>Code</span>
+                      </a>
+                      <a 
+                        href={project.demo} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        aria-label={`View ${project.title} live demo`}
+                        className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 transition-colors text-sm"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        <span>Demo</span>
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TiltCard>
             </div>
           ))}
         </div>
