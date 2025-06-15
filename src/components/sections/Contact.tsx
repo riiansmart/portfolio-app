@@ -52,8 +52,8 @@ const Contact = () => {
             const iconContainerStyle = "w-8 h-8 rounded-lg flex items-center justify-center shadow-md bg-black text-white dark:bg-white dark:text-black";
 
             return (
-              <div key={contact.label} className="flex flex-col items-center gap-1">
-                <div className={iconContainerStyle}>
+              <div key={contact.label} className="flex flex-col items-center gap-1 group">
+                <div className={`${iconContainerStyle} transition-transform duration-200 group-hover:scale-110`}>
                   <IconComponent className="size-4" />
                 </div>
                 <div className="text-center">

@@ -56,7 +56,7 @@ export const TiltCard = ({
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`transition-transform duration-150 ease-out will-change-transform ${className}`}
+      className={`transition-transform duration-150 ease-out will-change-transform hover:-translate-y-1 ${className}`}
       // ARIA role purely decorative; content is children components
       aria-hidden="true"
     >

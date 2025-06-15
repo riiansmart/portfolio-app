@@ -28,9 +28,9 @@ const Navbar = () => {
         </a>
         {/* Center: Nav Links */}
         <ul className="flex space-x-6">
-          <li><a href="#skills" className="px-2 py-1 rounded-full text-sm font-semibold tracking-wide text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to Skills section">Skills</a></li>
-          <li><a href="#projects" className="px-2 py-1 rounded-full text-sm font-semibold tracking-wide text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to Projects section">Projects</a></li>
-          <li><a href="#contact" className="px-2 py-1 rounded-full text-sm font-semibold tracking-wide text-black dark:text-white hover:bg-black/20 dark:hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:focus:ring-yellow-400" tabIndex={0} aria-label="Navigate to Contact section">Contact</a></li>
+          <li><a href="#skills" className="relative px-2 py-1 text-sm font-semibold tracking-wide text-black dark:text-white transition-colors duration-200 focus:outline-none after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full" tabIndex={0} aria-label="Navigate to Skills section">Skills</a></li>
+          <li><a href="#projects" className="relative px-2 py-1 text-sm font-semibold tracking-wide text-black dark:text-white transition-colors duration-200 focus:outline-none after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full" tabIndex={0} aria-label="Navigate to Projects section">Projects</a></li>
+          <li><a href="#contact" className="relative px-2 py-1 text-sm font-semibold tracking-wide text-black dark:text-white transition-colors duration-200 focus:outline-none after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full" tabIndex={0} aria-label="Navigate to Contact section">Contact</a></li>
         </ul>
         {/* Right: Resume Button & Mobile Nav */}
         <div className="flex items-center gap-2">
@@ -42,7 +42,7 @@ const Navbar = () => {
             className="hidden md:inline-flex text-black dark:text-white"
             tabIndex={0}
           >
-            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            {theme === "dark" ? <Sun className="h-5 w-5 transform transition-transform duration-300 rotate-180" /> : <Moon className="h-5 w-5 transform transition-transform duration-300" />}
           </Button>
           {/* Mobile Nav */}
           <Sheet>
@@ -62,7 +62,7 @@ const Navbar = () => {
                   className="mt-4 text-black dark:text-white"
                   tabIndex={0}
                 >
-                  {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                  {theme === "dark" ? <Sun className="h-5 w-5 transform transition-transform duration-300 rotate-180" /> : <Moon className="h-5 w-5 transform transition-transform duration-300" />}
                 </Button>
               </nav>
             </SheetContent>

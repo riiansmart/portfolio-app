@@ -10,7 +10,7 @@ const Hero = () => {
       <Card className="backdrop-blur-xl bg-white/30 dark:bg-black/30 border border-black dark:border-white/20 rounded-3xl shadow-2xl w-full">
         <CardContent className="flex flex-col md:flex-row items-center md:items-stretch p-0 w-full text-center md:text-left">
           <div className="flex flex-col items-center md:items-start justify-center gap-4 p-8 md:w-1/2 border-b md:border-b-0 md:border-r border-white/10 dark:border-black/20">
-            <Avatar className="h-28 w-28 mb-2 border-4 border-indigo-400/70 shadow-lg">
+            <Avatar className="h-28 w-28 mb-2 border-4 border-indigo-400/70 shadow-lg transition-transform duration-300 hover:rotate-1 hover:scale-105">
               <AvatarImage src="/avatar.jpg" alt="Rian Smart" />
               <AvatarFallback>RS</AvatarFallback>
             </Avatar>
@@ -34,6 +34,7 @@ const Hero = () => {
                 variant="outline"
                 aria-label="Email Contact"
                 tabIndex={0}
+                className="transition-transform duration-150 hover:-translate-y-0.5"
               >
                 <a
                   href="mailto:rismart1221@outlook.com"
@@ -49,6 +50,7 @@ const Hero = () => {
                 variant="outline"
                 aria-label="LinkedIn Profile"
                 tabIndex={0}
+                className="transition-transform duration-150 hover:-translate-y-0.5"
               >
                 <a
                   href="https://www.linkedin.com/in/michael-smart-47576a264/"
@@ -66,6 +68,7 @@ const Hero = () => {
                 variant="outline"
                 aria-label="GitHub Profile"
                 tabIndex={0}
+                className="transition-transform duration-150 hover:-translate-y-0.5"
               >
                 <a
                   href="https://github.com/riiansmart"
