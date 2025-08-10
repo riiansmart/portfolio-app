@@ -1,6 +1,6 @@
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
-import { Github, ExternalLink, Code } from "lucide-react";
+import { Github, Code } from "lucide-react";
 import { TiltCard } from "../common/TiltCard";
 
 const Projects = () => {
@@ -21,7 +21,7 @@ const Projects = () => {
       status: 'Live'
     },
     {
-      title: 'TaskFlow',
+      title: 'Zelvo',
       description: 'A full-stack task management web app built with React (Vite) and Spring Boot. Features JWT authentication, role-based access, and full CRUD task operations with a clean, responsive UI.',
       features: [
         'JWT-based user authentication and role-based access control',
@@ -32,7 +32,7 @@ const Projects = () => {
       tech: ['React', 'Spring Boot', 'TypeScript', 'PostgreSQL', 'Prisma', 'JWT'],
       github: 'https://github.com/riiansmart/taskflow_app',
       demo: '#',
-      status: 'In Development'
+      status: 'Completed'
     },
     {
       title: 'CineScope',
@@ -135,16 +135,6 @@ const Projects = () => {
                       >
                         <Github className="h-4 w-4" />
                         <span>Code</span>
-                      </a>
-                      <a 
-                        href={project.demo} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        aria-label={`View ${project.title} live demo`}
-                        className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors text-sm"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                        <span>Demo</span>
                       </a>
                     </div>
                   </CardContent>
