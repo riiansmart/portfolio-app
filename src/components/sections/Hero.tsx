@@ -1,14 +1,19 @@
+// Hero.tsx - Portfolio landing page hero section component.
+// Provides avatar, personal details, social links, CTA buttons, and smooth-scroll indicator.
 import { Card, CardContent } from "../ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
 import { MapPin, Briefcase, Mail } from "lucide-react";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 
+// Hero Section Component
 const Hero = () => {
   return (
     <section id="hero" className="w-full">
+      {/* Glassmorphism styled card acting as main content container */}
       <Card className="backdrop-blur-xl bg-white/30 dark:bg-black/30 border border-black dark:border-white/20 rounded-3xl shadow-2xl w-full">
         <CardContent className="flex flex-col md:flex-row items-center md:items-stretch p-0 w-full text-center md:text-left">
+          {/* Left Pane: Avatar & Intro Details */}
           <div className="flex flex-col items-center md:items-start justify-center gap-4 p-8 md:w-1/2 border-b md:border-b-0 md:border-r border-white/10 dark:border-black/20">
             <Avatar className="h-28 w-28 mb-2 border-4 border-indigo-400/70 shadow-lg transition-transform duration-300 hover:rotate-1 hover:scale-105 animate-float">
               <AvatarImage src="/avatar.jpg" alt="Rian Smart" />
@@ -28,6 +33,7 @@ const Hero = () => {
               </span>
             </div>
             <div className="flex gap-3 mt-2">
+              {/* Social Media Buttons */}
               <Button
                 asChild
                 size="sm"
@@ -82,6 +88,7 @@ const Hero = () => {
               </Button>
             </div>
           </div>
+          {/* Right Pane: Short bio and CTA buttons */}
           <div className="flex flex-col justify-center items-center md:items-start gap-4 md:w-1/2 p-8">
             <p className="text-base md:text-lg text-black dark:text-white font-medium">
               I am a 21 year old Software Developer. I have been programming for 3 years now. I create professional full stack web applications.
