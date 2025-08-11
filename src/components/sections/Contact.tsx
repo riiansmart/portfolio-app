@@ -2,7 +2,15 @@ import { Card, CardContent } from "../ui/card";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 
+// Contact component displays personal contact details with icons and links.
+// Utilises TailwindCSS utility classes for modern styling and ensures accessibility.
 const Contact = () => {
+  // List of contact details to render in the UI.
+  // Each entry consists of:
+  // - label: the type of contact (e.g., Email)
+  // - value: the display text for the contact detail
+  // - icon: the icon component to visually represent the contact method
+  // - href: a hyperlink destination (null for non-link items)
   const contactInfo = [
     {
       label: "Email",
