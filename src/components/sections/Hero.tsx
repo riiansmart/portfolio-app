@@ -96,14 +96,14 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-3 w-full justify-center md:justify-start">
               <Button asChild size="sm" variant="cta" className="relative overflow-hidden group">
                 <a
-                  href="/resume.pdf"
+                  href="/Michael_Smart_Resume.pdf"
                   download="Michael_Smart_Resume.pdf"
                   tabIndex={0}
                   aria-label="Download Resume"
                   onKeyDown={e => {
                     if (e.key === "Enter" || e.key === " ") {
                       const link = document.createElement("a");
-                      link.href = "/resume.pdf";
+                      link.href = "/Michael_Smart_Resume.pdf";
                       link.download = "Michael_Smart_Resume.pdf";
                       link.click();
                     }
