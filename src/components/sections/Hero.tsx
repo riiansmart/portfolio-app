@@ -91,7 +91,7 @@ const Hero = () => {
           {/* Right Pane: Short bio and CTA buttons */}
           <div className="flex flex-col justify-center items-center md:items-start gap-4 md:w-1/2 p-8">
             <p className="text-base md:text-lg text-black dark:text-white font-medium">
-              I am a 21 year old Software Developer. I have been programming for 3 years now. I create professional full stack web applications.
+              I am a 22 year old Software Developer. I have been programming for 3 years now. I create professional full stack web applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 w-full justify-center md:justify-start">
               <Button asChild size="sm" variant="cta" className="relative overflow-hidden group">
